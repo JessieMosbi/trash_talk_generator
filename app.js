@@ -23,7 +23,7 @@ const bodyParser = require('body-parser')
 const generateTrash = require('./generate_trash')
 
 const app = express()
-app.engine('handlebars', exphbs({ defaultLayout: 'main', helpers: require('./handlebarsHelper') }))
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.use(bodyParser.urlencoded({ extended: true }))
